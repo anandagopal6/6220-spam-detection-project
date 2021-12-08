@@ -7,7 +7,7 @@ Welcome to our spam detection ensemble repository!
 > -- code<br>
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -- models<br>
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -- preprocess<br>
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -- Ensemble.ipynb<br>
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -- ensemble<br>
 > -- data<br>
 
 - `analysis`: contains all of our statistics and generated word clouds regarding ham/spam misclassification and model performance
