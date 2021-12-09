@@ -13,7 +13,7 @@ Welcome to our spam detection ensemble repository!
 - `analysis`: contains all of our statistics and generated word clouds regarding ham/spam misclassification and model performance
 - `code`: folder that houses the majority of our pipeline
   - `models`: Python notebooks containing each of the model types (i.e., BiLSTM, NN, and sklearn models)
-  - `preprocess`: Python notebooks for processing the individual datasets and then combining the datasets into the `../data/fully_combined.csv` file
+  - `preprocess`: Python notebooks for processing the individual datasets and then combining the datasets into the `data/fully_combined.csv` file
   - `ensemble`: folder with `Ensemble.ipynb` and model classification results
     - `Ensemble.ipynb`: Python notebook that pools each of the models' individual results into a singular dataframe, then runs the majority voting process on these results
 - `data`: folder containing `fully_combined.csv`
@@ -31,7 +31,7 @@ Welcome to our spam detection ensemble repository!
   ## Models
 
   ### sklearn Models
-  Vectorization
+  #### Vectorization
   
   ---
 
