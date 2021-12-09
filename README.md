@@ -34,7 +34,7 @@ Welcome to our spam detection ensemble repository!
   These models all accept vectorized emails as input. They have a 60/40 train/test split, and the LinearSVC has the best performance out of the three. To reproduce the vectorized dataset and scikit-learn models, run through the `code/models/sklearn_models.ipynb` notebook. 
   #### Vectorization
   There are vectorization functions inside of the Python notebook that will run on the `data/fully_combined.csv` dataset. The vectorization process starts off by finding the 6,000 most common words within the `fully_combined.csv` dataset and then vectorizing the `fully_combined.csv` dataset based on this vocabulary. The vectorized dataset is then saved to `data/vectorized_most_common.csv`. 
-  ### Results
+  #### Results
   The classification results for each of the sklearn models is combined into a single CSV file and saved under `ensemble/sklearn_results.csv`.
   
   ---
