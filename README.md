@@ -40,7 +40,16 @@ Welcome to our spam detection ensemble repository!
   ---
 
   ### Neural Network
-  Vectorization
+  #### Setup: 
+  In order to run the Neural Network notebook, ensure that the full data: `data/fully_combined_data.csv` is uploaded to your drive. Connect to your drive as shown in the first few cells and store the path to the file in the `RAW_DATA_FILE` constant. 
+  
+  #### Vectorization:
+  First, set the `TRAIN_TEST_DIR` constant to a directory in your google drive where you want to store the vectorized train and test data for model training.
+  Run through the entire **Data Preparation** section of the notebook to generate vectorized data by the bag of words technique.
+  
+  #### Results:
+  First, set the `DATA_DIR` constant to the value of `TRAIN_TEST_DIR` or the location of the vectorized and split data generated in the _Data Preparation_ section of the notebook.
+  Then, run through the section **Model Preparation** to train the model on the training data. If you would like to download a csv of the full data labeled by the neural network then run the **Get Labeling for Data** section. Finally some data statics and some basic additional analysis is included.
   
   ---
 
