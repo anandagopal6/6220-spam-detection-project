@@ -25,15 +25,17 @@ Welcome to our spam detection ensemble repository!
   ![Architecture Diagram](architecture.png)
 
   ## Data
-  Our `fully_combined.csv` dataset consists of three different datasets found from the spam detection model repositories that we were adapting for this project. These datasets are as follows: Enron, ADCG, and Spam Assassin. In total, the `fully_combined` dataset consists of 33,752 emails each classified as either ham (16,143 emails) or spam (17,609 emails). The data format within the `fully_combined.csv` file is a row dedicated to each email and the email represented as the subject + body concatenated into a single string, along with the ham/spam label in a separate column. 
+  Our `fully_combined.csv` dataset consists of three different datasets found from the spam detection model repositories that we were adapting for this project. These datasets are as follows: Enron, ADCG, and Spam Assassin. In total, the `fully_combined` dataset consists of 33,752 emails each classified as either ham (16,143 emails) or spam (17,609 emails), which makes the set very balanced between the two labels. The data format within the `fully_combined.csv` file is a row dedicated to each email and the email represented as the subject + body concatenated into a single string, along with the ham/spam label in a separate column. 
 
-  ### Preprocessing and combining
-  - [ ] what preprocessing techniques were used (could just list what is on the report slide)
-  - [ ] how each dataset underwent some preprocessing individually to get into the "subject + body" format
-  - [ ] how the combination python notebook runs the same preprocessing steps on each dataset (uniform processing) and then combines it all into the same CSV file
+ ### Preprocessing and combining
+  We used a combination of three datasets to test our models on: ADCG, SpamAssassin, and Enron
   
-  ### How to reproduce `fully_combined.csv`
-  - [ ] which notebooks need to be run and in what order
+  #### Preprocessing each Dataset Independently
+  For each of the three datasets, ADCG, SpamAssassin, and Enron, we took out only necessary features (Subject + Body and the labels) which was done in the three separate `ACDGPreProcess.ipynb`, `spamAssassinPreProcess.ipynb`, and `ENRONSpamEmailProcessing.ipynb`. These python notebooks took consistant features from each of the three datasets we used and put them into respective csv files.
+  We then had to clean each of the three datasets uniformly, which was done through the `CombineDataSpamEmailProcessing.ipynb` python notebook. This took out escape sequences, long words, non-ASCII, punctuation, numbers, stopwords and converted to lowercase then lemmatized. Now we have three independent dataframes that are each preprocessed the same way.
+  
+  #### Combining the Datasets
+  From there, given the three preprocessed dataframes, we were easily able to concatenate the three datasets, shuffle the data and finally remove all duplicate emails through the last cell in the `CombineDataSpamEmailProcessing.ipynb` python notebook. This combined dataset was written into the `fully_combined.csv` and could be accessed and used by other models. This combined large dataset is open to the public to use for future spam detection models.
   
   ## Models
 
