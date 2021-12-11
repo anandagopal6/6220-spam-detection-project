@@ -28,7 +28,7 @@ Welcome to our spam detection ensemble repository!
   Our `fully_combined.csv` dataset consists of three different datasets found from the spam detection model repositories that we were adapting for this project. These datasets are as follows: Enron, ADCG, and Spam Assassin. In total, the `fully_combined` dataset consists of 33,752 emails each classified as either ham (16,143 emails) or spam (17,609 emails), which makes the set very balanced between the two labels. The data format within the `fully_combined.csv` file is a row dedicated to each email and the email represented as the subject + body concatenated into a single string, along with the ham/spam label in a separate column. 
 
  ### Preprocessing and combining
-  We used a combination of three datasets to test our models on: ADCG, SpamAssassin, and Enron
+  We used a combination of three datasets to test our models on: ADCG, SpamAssassin, and Enron.
   
   #### Preprocessing each Dataset Independently
   For each of the three datasets, ADCG, SpamAssassin, and Enron, we took out only necessary features (Subject + Body and the labels) which was done in the three separate `ACDGPreProcess.ipynb`, `spamAssassinPreProcess.ipynb`, and `ENRONSpamEmailProcessing.ipynb`. These python notebooks took consistant features from each of the three datasets we used and put them into respective csv files.
